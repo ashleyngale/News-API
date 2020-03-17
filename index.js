@@ -1,17 +1,17 @@
 "use strict";
 
-const searchURL  = "http://newsapi.org/v2/everything?q=bitcoin&apiKey=efd09862aec8405fa7edd50c64e9f257";
+const searchURL  = "http://newsapi.org/v2/everything?";
+//const apiKey="efd09862aec8405fa7edd50c64e9f257";
 
-cost apiKey= "efd09862aec8405fa7edd50c64e9f257";
 //format paprams
-function formatQueryPrams(params) {
+function formatQueryParams(params) {
 const queryItems= object.key(params)
 .map(key => `${(key)}=${(params[key])}`)
 return queryItems.join('&');
 }
 
 //display results list
-function displayresults (responseJson){
+function displayResults (responseJson){
   console.log(responseJson);
   $('results-list').empty();
 
@@ -30,17 +30,17 @@ $('#results').removeClass('hidden');
 };
 
 //get results/fetch
-function getresults(id){
+function getResults(q){
   const params = {
-    q,
+    q=bitcoin,
     name:"",
     description:"",
     url:"",
     apiKey:"efd09862aec8405fa7edd50c64e9f257";
   };
 
-  const queryString = formatQueryPrams(prams)
-  cosnt url = searchURL + '?' + queryString;
+  const queryString = formatQueryParams(params)
+  var url = searchURL + queryString;
 
   console.log(url);
 
@@ -62,7 +62,7 @@ function watchForm(){
   $('form').submit(event => {
     event.preventDefault();
     const searchTerm = $('#news-search').val();
-    getresults(searchTerm);
+    getResults(searchTerm);
   });
 }
 
