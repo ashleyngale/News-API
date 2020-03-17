@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<htmllang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Find news articles</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+
+<div class="container">
+
+    <h1>What do you want to know about today?</h1>
+
+  <form class="page-form" action="index.html" method="post" id="js-form">
+
+    <label for="news-search"> Search for News</label>
+      <input type="text" name="sign" placeholder="Coronavirus outbreak" class="news-input" id="news-search">
+
+      <button type="submit" name="button" id="submit" class="sub-button">Submit</button>
+  </form>
+
+  <p id="js-error-message" class="error-message"></p>
+
+  <section id="results" class="hidden">
+    <h2>results</h2>
+    <ul id="resultsplist"></ul>
+  </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
