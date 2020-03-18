@@ -1,27 +1,29 @@
 "use strict";
 
-const searchURL  = "http://newsapi.org/v2/everything?";
-//const apiKey="efd09862aec8405fa7edd50c64e9f257";
+const searchURL = "http://newsapi.org/v2/everything?";
+const apiKey="efd09862aec8405fa7edd50c64e9f257";
 
 //format paprams
 function formatQueryParams(params) {
-const queryItems= object.key(params)
+const queryItems= Object.keys(params)
 .map(key => `${(key)}=${(params[key])}`)
 return queryItems.join('&');
 }
-
+console.log('success');
 //display results list
 function displayResults (responseJson){
   console.log(responseJson);
-  $('results-list').empty();
+  console.log('success');
 
-  for(let i=0; i < responseJson.length; i++){
-    $('results-list').append(
+  $('#results-list').empty();
+
+  for(let i=0; i < responseJson.article.length; i++){
+    $('#results-list').append(
       `<li>
         <h3>
-          <a href="${responseJson.sources[i].name}">${responseJson.sources[i].name}</a>
-          <a href="${responseJson.sources[i].url}">${responseJson.sources[i].url}</a>
-          <a href="${responseJson.sources[i].description}">${responseJson.sources[i].description}</a>
+          <a href="${responseJson.article[i].title}">${responseJson.article[i].title}</a>
+          <a href="${responseJson.articles[i].url}">${response.articles[i].url}</a>
+          <a href="${responseJson.articles[i].description}">${response.articles[i].description}</a>
         </h3>
       </li>`
     )
@@ -32,17 +34,19 @@ $('#results').removeClass('hidden');
 //get results/fetch
 function getResults(q){
   const params = {
-    q=bitcoin,
-    name:"",
+    q,
+    title:"",
     description:"",
     url:"",
-    apiKey:"efd09862aec8405fa7edd50c64e9f257";
+    apiKey:'efd09862aec8405fa7edd50c64e9f257'
   };
+console.log(q);
 
   const queryString = formatQueryParams(params)
-  var url = searchURL + queryString;
+  let url = searchURL + queryString;
 
   console.log(url);
+
 
   fetch(url)
   .then(response => {
@@ -63,6 +67,7 @@ function watchForm(){
     event.preventDefault();
     const searchTerm = $('#news-search').val();
     getResults(searchTerm);
+    console.log("yay");
   });
 }
 
