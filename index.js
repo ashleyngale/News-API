@@ -1,7 +1,7 @@
 "use strict";
 
 const searchURL = "http://newsapi.org/v2/everything?";
-const apiKey="efd09862aec8405fa7edd50c64e9f257";
+const apiKey="1073e27e20fe4d109d7bcbfd901ac99c";
 
 //format paprams
 function formatQueryParams(params) {
@@ -38,7 +38,7 @@ function getResults(q){
     title:"",
     description:"",
     url:"",
-    apiKey:'efd09862aec8405fa7edd50c64e9f257'
+    apiKey:'1073e27e20fe4d109d7bcbfd901ac99c'
   };
 console.log(q);
 
@@ -47,15 +47,18 @@ console.log(q);
 
   console.log(url);
 
+var req = new Request(url);
 
-  fetch(url)
+  fetch(req)
   .then(response => {
     if (response.ok) {
       return response.Json();
-    }
+    }else{
     throw new Error(response.statusText);
+    }
   })
-  .then (responseJson => displayresults (responseJson))
+  .then (responseJson => displayResults
+  (responseJson))
   .catch(err => {
     $('#js-error-message').text(`Something went wrong: ${err.message}`);
   });
