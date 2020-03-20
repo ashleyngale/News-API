@@ -1,6 +1,6 @@
 "use strict";
 
-const searchURL = "http://newsapi.org/v2/everything?";
+const searchURL = "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?";
 const apiKey="1073e27e20fe4d109d7bcbfd901ac99c";
 
 //format paprams
@@ -52,7 +52,7 @@ var req = new Request(url);
   fetch(req)
   .then(response => {
     if (response.ok) {
-      return response.Json();
+      return responseJson();
     }else{
     throw new Error(response.statusText);
     }
