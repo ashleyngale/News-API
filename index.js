@@ -1,6 +1,6 @@
 "use strict";
 
-const searchURL = "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?";
+const searchURL = "https://newsapi.org/v2/everything?";
 const apiKey="1073e27e20fe4d109d7bcbfd901ac99c";
 
 //format paprams
@@ -13,19 +13,21 @@ console.log('success');
 //display results list
 function displayResults (responseJson){
   console.log(responseJson);
-  console.log('success');
+  console.log('yes');
 
   $('#results-list').empty();
 
-  for(let i=0; i < responseJson.article.length; i++){
+  for(let i=0; i < responseJson.articles.length; i++){
     $('#results-list').append(
-      `<li>
-        <h3>
-          <a href="${responseJson.article[i].title}">${responseJson.article[i].title}</a>
-          <a href="${responseJson.articles[i].url}">${response.articles[i].url}</a>
-          <a href="${responseJson.articles[i].description}">${response.articles[i].description}</a>
-        </h3>
-      </li>`
+      `<ul>
+          <li>
+           <h3>
+             <h2> <a class="title" href="${responseJson.articles[i].title}">${responseJson.articles[i].title}</a></h2>
+              <a class="description" href="${responseJson.articles[i].description}">${responseJson.articles[i].description}</a><br>
+              <a class= "url" href="${responseJson.articles[i].url}">${responseJson.articles[i].url}</a>
+            </h3>
+          </li>
+       </ul>`
     )
   };
 $('#results').removeClass('hidden');
@@ -52,10 +54,9 @@ var req = new Request(url);
   fetch(req)
   .then(response => {
     if (response.ok) {
-      return responseJson();
-    }else{
-    throw new Error(response.statusText);
+      return response.json();
     }
+    throw new Error(response.statusText);
   })
   .then (responseJson => displayResults
   (responseJson))
@@ -75,3 +76,4 @@ function watchForm(){
 }
 
 $(watchForm);
+
