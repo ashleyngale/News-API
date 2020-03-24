@@ -17,12 +17,19 @@ body{
 
 h1{
   margin: 90px 0px 20px 0px;
-  font-family: 'Playfair Display', serif
+  font-family: 'Playfair Display', serif;
+  background-color: white;
+  padding: 30px;
+  margin: 40px;
 }
 
 h2{
   font-family: 'Inconsolata', monospace;
   margin: 5px 5px 2px ;
+  background-color: white;
+  padding: 30px;
+  margin: 10px;
+  border:6px;
 }
 
 input{
@@ -45,6 +52,9 @@ button{
 .title{
   color: rgb(206, 99, 152);
   text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+
 }
 
 a:visited {
@@ -52,17 +62,27 @@ a:visited {
 }
 
 .description{
-color:rgb(214, 56, 162);
-text-decoration: none;
+  color:rgb(214, 56, 162);
+  text-decoration: none;
 }
 
 .url{
   color: rgb(184, 43, 109);
 }
 
-.results-list{
-  display: flex;
+#results-list{
+  display:none;
   text-decoration: none;
-  align-items: left;
- padding: 40px;
+  text-align:left;
+  padding: 10px;
+  flex-direction: column;
+  background-color: white;
+  margin: 30px;
+  border-radius: 10px;
+  border-color: rgb(175, 55, 95);
+  border: 10px;
+}
+
+.hidden{
+  display:none;
 }

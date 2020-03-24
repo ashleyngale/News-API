@@ -19,18 +19,17 @@ function displayResults (responseJson){
 
   for(let i=0; i < responseJson.articles.length; i++){
     $('#results-list').append(
-      `<ul>
-          <li>
+         `<li>
            <h3>
              <h2> <a class="title" href="${responseJson.articles[i].title}">${responseJson.articles[i].title}</a></h2>
               <a class="description" href="${responseJson.articles[i].description}">${responseJson.articles[i].description}</a><br>
               <a class= "url" href="${responseJson.articles[i].url}">${responseJson.articles[i].url}</a>
             </h3>
-          </li>
-       </ul>`
+          </li>`
     )
   };
-$('#results').removeClass('hidden');
+$('#results').removeClass("hidden");
+
 };
 
 //get results/fetch
