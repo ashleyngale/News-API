@@ -1,60 +1,64 @@
 body{
-  background-image: url("pink-tile.jpeg");
+  /*background-image: url("pink-tile.jpeg");*/
+  background-color: white;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
 .container{
-    line-height: 50px;
-   /*margin: 50px;*/
-    position: absolute;
+    position: relative;
     text-align: center;
-    top: 10%;
-   
+    display:flex;
+    flex-direction: column;
     border: white 3px;
-    overflow-wrap: break-word;
+    top: 10%;
+    line-height: 50px;
+    height: 100%;
+    width: 100%;
 }
 
 h1{
-  margin: 90px 0px 20px 0px;
   font-family: 'Playfair Display', serif;
-  background-color: white;
+  background-color:rgb(235, 229, 229);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 30px;
-  margin: 40px;
-  width: 75%;
-  border-radius: 80px;
+  margin: 90px 0px 20px 0px;
 }
 
 h2{
   font-family: 'Inconsolata', monospace;
-  margin: 5px 5px 2px ;
-  background-color: white;
-  padding: 30px;
-  margin: 10px;
-  border:6px;
-  border-radius: 80px;
-  width: 25%;
+  background-color: rgb(235, 229, 229);
   text-align: center;
+  border-radius: 80px;
+  border:6px;
+  margin: 5px 5px 2px ;
+  padding: 30px;
 }
 
-input{
+.news-input{
  height: 40px;
- width: 400px;
+ width: 800px;
  border-radius:10px;
  font-size: 15px;
+ border-style: solid;
+ border: 10px;
+ border-color: rgb(221, 220, 217) ;
 }
 
 button{
   height: 30px;
   width: 100px;
   border-radius: 20px;
-}
-
-#submit{
   margin: 15px;
 }
 
 .title{
-  color: rgb(206, 99, 152);
+  color: black;
+  font-weight:bold;
   text-decoration: none;
   border-radius: 5px;
   padding: 5px;
@@ -79,10 +83,9 @@ a:visited {
   text-align:left;
   padding: 10px;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(235, 229, 229); 
   margin: 30px;
-  border-radius: 10px;
-  border-color: rgb(175, 55, 95);
+  border-radius: 5px;
   border: 10px;
   list-style: none;
 }
