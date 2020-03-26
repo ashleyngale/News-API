@@ -1,6 +1,5 @@
 body{
-  /*background-image: url("pink-tile.jpeg");*/
-  background-color: white;
+  background-color:black;
   box-sizing: border-box;
   max-width: 100%;
   overflow-x: hidden;
@@ -15,45 +14,60 @@ body{
     border: white 3px;
     top: 10%;
     line-height: 50px;
-    height: 100%;
-    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin:auto;
 }
 
 h1{
-  font-family: 'Playfair Display', serif;
-  background-color:rgb(235, 229, 229);
+  font-family: 'Concert One', cursive;
+  color: white;
+  background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  margin: 90px 0px 20px 0px;
+  height: 70px;
+    margin: 0 -20px;
+    padding: 0 20px;
+    text-align: right;
+    position: relative;
 }
 
 h2{
-  font-family: 'Inconsolata', monospace;
-  background-color: rgb(235, 229, 229);
+  font-family: 'Playfair Display', serif;
+  color:rgb(0, 0, 0);
+  background-color: white;
   text-align: center;
-  border-radius: 80px;
   border:6px;
-  margin: 5px 5px 2px ;
-  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+  label{
+  max-width:500px;
+  display: inline-block;
 }
 
 .news-input{
  height: 40px;
- width: 800px;
+ width: 300px;
  border-radius:10px;
  font-size: 15px;
  border-style: solid;
- border: 10px;
- border-color: rgb(221, 220, 217) ;
+ border-color: rgb(221, 220, 217);
+ display: inline-block;
 }
 
 button{
-  height: 30px;
-  width: 100px;
+  height: 50px;
+  width: 130px;
   border-radius: 20px;
   margin: 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  background-color: rgb(0, 0, 0);
+  color:white;
 }
 
 .title{
@@ -75,16 +89,14 @@ a:visited {
 }
 
 .url{
-  color: rgb(184, 43, 109);
+  color: rgb(147, 214, 181);
 }
 
 #results-list{
   text-decoration: none;
-  text-align:left;
   padding: 10px;
   flex-direction: column;
-  background-color: rgb(235, 229, 229); 
-  margin: 30px;
+  margin: 15px;
   border-radius: 5px;
   border: 10px;
   list-style: none;
@@ -92,4 +104,10 @@ a:visited {
 
 .hidden{
   display:none;
+}
+
+.holder{
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 5px;
 }
