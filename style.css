@@ -44,6 +44,10 @@ h2{
   padding: 10px;
 }
 
+li{
+  border-bottom:1px solid  grey;
+}
+
 label{
   max-width:500px;
   display: inline-block;
@@ -110,4 +114,13 @@ a:visited {
   background-color: white;
   margin-top: 50px;
   border-radius: 5px;
+}
+
+
+@media screen and (max-width: 480px) {
+  body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
