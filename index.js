@@ -78,7 +78,7 @@ function watchForm(){
     event.preventDefault();
     const searchTerm = $('#news-search').val();
     getResults(searchTerm);
-    validationForm();
+    validationForm(searchTerm);
     console.log("yay");
   });
 }
