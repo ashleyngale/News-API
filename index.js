@@ -63,14 +63,7 @@ function getResults(q){
   });
   }
 
-//display error if no input 
-function validateForm() {
-  var x = $('#news-search');
-  if (x === "") {
-    alert("Search box must be filled out");
-    return false;
-  }
-}
+
 
 //call all function
 function watchForm(){
@@ -78,10 +71,23 @@ function watchForm(){
     event.preventDefault();
     const searchTerm = $('#news-search').val();
     getResults(searchTerm);
-    validationForm(searchTerm);
+
     console.log("yay");
   });
 }
+
+function watchForm(){
+  $('form').submit(event => {
+    event.preventDefault();
+    const searchTerm = $('#news-search').val();
+    if (!searchTerm) { 
+      alert("You forgot to type something in the search box!");
+    } else {
+        getResults(searchTerm);
+        console.log("yay");
+    });
+}
+
 
 $(watchForm);
 
