@@ -3,6 +3,14 @@ body{
   max-width: 100%;
 }
 
+.title{
+  color: black;
+  font-weight:bold;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 1px;
+  margin-bottom: 5px;
+}
 
 .container{
   position: relative;
@@ -11,7 +19,7 @@ body{
   flex-direction: column;
   border: white 3px;
   top: 10%;
-  line-height: 50px;
+  line-height: 25px;
   margin-left: 20px;
   margin-right: 20px;
   margin:auto;
@@ -19,12 +27,13 @@ body{
 
 h1{
   font-family: 'Concert One', cursive;
+  font-size: 60px;
   color: white;
   background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  height: 100px;
   margin: 0 -20px;
   padding: 0 20px;
   text-align: right;
@@ -43,21 +52,11 @@ h2{
 }
 
 li{
-  border-bottom:1px solid  grey;
+  list-style-type:none;
 }
-
+  
 label{
   max-width:500px;
-  display: inline-block;
-}
-
-.news-input{
-  height: 40px;
-  width: 300px;
-  border-radius:10px;
-  font-size: 15px;
-  border-style: solid;
-  border-color: rgb(221, 220, 217);
   display: inline-block;
 }
 
@@ -72,14 +71,38 @@ button{
   color:white;
 }
 
-.title{
-  color: black;
-  font-weight:bold;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 5px;
+.dropButton{
+  background-color: rgba(78, 76, 76, 0.795);
+  height: 60px;
+  width: 300px;
+  display:flex;
+  cursor: pointer;
+}
 
+.dropDown {
+  position: relative;
+  display: inline-block;
+}
+
+.headlineTitle{
+  color:rgba(0, 0, 0, 0.884);
+  font-size: 20px;
+  line-height: 3px;
+}
+
+#top-headlines{
+  line-height: 40px;
+  
+}
+
+.news-input{
+  height: 40px;
+  width: 600px;
+  border-radius:10px;
+  font-size: 15px;
+  border-style: solid;
+  border-color: rgb(221, 220, 217);
+  display: inline-block;
 }
 
 a:hover{
@@ -113,6 +136,10 @@ a:visited {
   display:none;
 }
 
+.dropdown-content{
+  display: none;
+}
+
 .holder{
   background-color: white;
   margin-top: 50px;
@@ -121,15 +148,12 @@ a:visited {
 
 @media screen and (min-width:480px) {
   body {
-    
     box-sizing: border-box;
-   
   }
 }
 
 @media screen and (min-width:800px) {
   body {
-   
     box-sizing: border-box;
     width: 100%;
   }

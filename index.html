@@ -9,34 +9,45 @@
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
   </head>
-<body>
+  <body>
 
-<div class="container">
+    <div class="container">
 
-    <h1 class="nav" >Learn Something New Today</h1>
+      <h1 class="nav" >Learn Something New Today</h1>
 
-  <form class="page-form" action="index.html" method="post" id="js-form">
-
-    <main class="holder">
-
-      <label for="news-search"><h2> Search for News</h2></label>
-      <input type="text" name="search" placeholder="Coronavirus outbreak" class="news-input" id="news-search">
-      <button type="submit" name="button" id="submit" class="sub-button">Submit</button>
-
-  </form>
-
-      <p id="js-error-message" class="error-message"></p>
-
-      <img src="newspaper-man.png" alt="Man reading the newspaper">
-
-        <section id="results" class="hidden">
-          <h2>Results below...</h2>
-          <ul id="results-list">
+<section id="headlineResults" class="hideHead">
+      <div class="dropDown">
+        <button class="dropButton"> Click Here for the Top 20 Headlines in the USA
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <ul id="top-headlines">
           </ul>
-        </section>
-    </main>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-</body>
+        </div>
+      </div>
+</section>
+
+      <form class="page-form" action="index.html" method="post" id="js-form">
+
+        <main class="holder">
+
+          <label for="news-search"><h2> Search for News</h2></label>
+          <input type="text" name="search" placeholder="Coronavirus outbreak" class="news-input" id="news-search">
+          <button type="submit" name="button" id="submit" class="sub-button">Submit</button>
+
+      </form>
+
+          <p id="js-error-message" class="error-message"></p>
+
+          <img src="newspaper-man.png" alt="Man reading the newspaper">
+
+          <section id="results" class="hidden">
+            <h2>Results below...</h2>
+            <ul id="results-list"></ul>
+          </section>
+        </main>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+  </body>
 </html>

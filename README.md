@@ -7,4 +7,4 @@ This application was built with Javascript, jQuery, HTML, and CSS.
 
 ![](./Website-preview.jpg)
 
- 
+ All articles are from an external source
